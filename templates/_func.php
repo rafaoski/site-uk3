@@ -103,20 +103,20 @@ function externalLink(PageArray $external_links, array $options = []) {
 $style = (isset($options['style']) && !empty($options['style'])) ? "style='{$options['style']}'" : '';
 $class = (isset($options['class']) && !empty($options['class'])) ? "class='{$options['class']}'" : '';
 $ratio = (isset($options['ratio']) && !empty($options['ratio'])) ? "{$options['ratio']}" : '1.3';
-  $out = '';
-  foreach ($external_links as $link) {
+    $out = '';
+    foreach ($external_links as $link) {
     $icon = $link->text_1 ? "data-uk-icon='icon:$link->text_1; ratio: $ratio'" : '';
-    $title = $link->text_3 ?  "title='$link->text_3'" : '';
+    $title = $link->text_3 ? "title='$link->text_3'" : '';
     $li_class = "external_link-" . sanitizer()->pageName($link->text_1, true);
-    $tooltip = $link->text_3 ?  "uk-tooltip='$link->text_3'" : '';
+    $tooltip = $link->text_3 ?  "data-uk-tooltip='$link->text_3'" : '';
     $target = $link->checkbox ?  "target='_blank'" : '';
     $no_follow = $link->checkbox_1 ?  "rel='nofollow'" : '';
     $all_items = "$icon $title $tooltip $target $no_follow";
-      if($link->text_1 == 'rss' && $link->url_1 == '') $link->url_1 = pages()->get("template=blog-rss")->url;
-        $out .= "<li class='$li_class uk-padding-remove'><a $class $style href='$link->url_1'
-        $all_items>$link->text_2 </a></li>";
-  }
-  return $out;
+        if($link->text_1 == 'rss' && $link->url_1 == '') $link->url_1 = pages()->get("template=blog-rss")->url;
+        $out .= "<li class='$li_class uk-padding-remove'>";
+        $out .= "<a $class $style href='$link->url_1' $all_items>$link->text_2 </a></li>";
+    }
+    return $out;
 }
 
 /**
