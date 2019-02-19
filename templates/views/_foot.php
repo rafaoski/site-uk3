@@ -9,6 +9,7 @@
     <span class="uk-search-icon-flip" data-uk-search-icon></span>
     <input id='search' type='text' name='q' class='uk-search-input'
            placeholder='<?=setting('search-placeholder')?>&hellip;' required>
+    </form>       
   </div><!-- /SEARCH FORM -->
 <!-- COPYRIGHT TEXT -->
   <div class='copyright'>
