@@ -1,0 +1,9 @@
+// @mixin hook-heading-hero(){
+// 	font-size: 3rem;
+// 	@include md {
+// 		font-size: 15rem;
+// 	}
+// }
+@mixin hook-base-heading(){
+	font-family: 'Jura', sans-serif;
+}

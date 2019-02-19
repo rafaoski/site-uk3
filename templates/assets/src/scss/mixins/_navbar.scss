@@ -1,0 +1,35 @@
+// Navbar Item
+@mixin hook-navbar-nav-item-active(){
+    color: $global-link-color;
+		border-bottom: 2px solid $orange;
+}
+@mixin hook-navbar-nav-item() {
+	color: $dark_gray;
+	position: relative;
+	text-transform: $navbar-nav-item-text-transform;
+	transition-property: color, background-color;
+	&::before {
+			content: "";
+			position: absolute;
+			top:  0;
+			left: 0;
+			right: 100%;
+			border-top: 2px solid $tomato;
+			transition: right 0.3s ease-out;
+	}
+}
+@mixin hook-navbar-nav-item-hover(){
+	color:  rgba($tomato, .8);
+	&::before { right: 0; }
+}
+
+// Header Navbar Dropdown Item
+@mixin hook-navbar-dropdown(){
+	 box-shadow: $navbar-dropdown-box-shadow;
+	 background: rgba( $black, .93 );
+	 border-bottom: 1px solid rgba($gray, .5);
+}
+// Header Navbar Dropdown Item Active
+@mixin hook-navbar-dropdown-nav-item-active(){
+		 color: $orange;
+}

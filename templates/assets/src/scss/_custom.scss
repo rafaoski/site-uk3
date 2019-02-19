@@ -1,0 +1,163 @@
+#html-body, p, a, blockquote {
+  /* default font */
+  font-family: 'Jura', sans-serif;
+}
+
+/* Link Effect */
+a {
+    transition: all .3s ease;
+}
+
+/* Logo effect */
+.svg-lighten {
+   filter: invert(80%);
+   &:hover {
+     filter: invert(100%);
+   }
+}
+
+/* Hover Effect */
+.hover {
+  opacity: 1;
+  transition: all .3s ease;
+}
+.hover:hover {
+  opacity: 0.7;
+}
+
+/* External Link */
+.external-link {
+  border: 2px solid rgba($alice, .6);
+  padding: 9px;
+  margin: 5px;
+  border-radius: 90px;
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+  @include md {
+    border: 4px solid rgba($alice, .6);
+    padding: 15px;
+    margin: 12px;
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+/* Main Area */
+#main a {
+  font-weight: bold;
+  font-size: 1.7rem;
+  @include hook-button-text;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    @include hook-button-text-hover;
+  }
+}
+
+#main p {
+  font-size: 1.3rem;
+}
+
+/* Heading Hero */
+.uk-heading-hero {
+  padding-top: 50px;
+}
+
+/* Home Meta Title */
+.template-home {
+   .meta-title {
+     color: tomato;
+   }
+}
+
+/* Breadcrumbs */
+.uk-breadcrumb li {
+  font-size: 1.2rem;
+  a {
+    font-size: 1.2rem;
+  }
+}
+
+/* avatar that appears in comments */
+img.uk-comment-avatar {
+	width: 60px;
+	height: 60px;
+}
+
+
+/****************************************************************
+ * Bodycopy text and images
+ *
+ * These styles are good to have on any ProcessWire site
+ *
+ */
+
+.align_left {
+  /* display images in center rather than aligned */
+  display: block;
+  float: none;
+  margin: 1em auto;
+  max-width: 100%;
+    @include md {
+    	float: left;
+    	margin: 0 1em 0.5em 0;
+    	position: relative;
+    	top: 0.5em;
+    	max-width: 50%;
+    }
+}
+
+.align_right {
+  /* display images in center rather than aligned */
+  display: block;
+  float: none;
+  margin: 1em auto;
+  max-width: 100%;
+    @include md {
+    	float: right;
+    	margin: 0 0 0.5em 1em;
+    	max-width: 50%;
+  }
+}
+
+.align_center {
+  /* for images placed in rich text editor */
+  display: block;
+  float: none;
+  margin: 1em auto;
+  max-width: 100%;
+    @include md {
+    	display: block;
+    	margin: 1em auto;
+    	position: relative;
+    	top: 0.5em;
+    }
+}
+
+figure {
+  /* figure for image that has a caption */
+    display: block;
+    text-align: center;
+      @include md {
+      	display: table;
+      	margin: 1em 0;
+    }
+}
+
+figure figcaption {
+  /* display caption text below image contained to image width */
+  display: block;
+  text-align: center;
+    @include md {
+    	display: table-caption;
+    	caption-side: bottom;
+    	font-size: 13px;
+    	line-height: 1.4em;
+    	margin-top: 5px;
+    	color: #777;
+  }
+}

@@ -1,0 +1,28 @@
+// https://daviseford.com/blog/2018/01/10/scss-responsive-media-query-mixins.html
+// Small devices
+@mixin sm {
+   @media (min-width: #{$breakpoint-small}) {
+       @content;
+   }
+}
+
+// Medium devices
+@mixin md {
+   @media (min-width:  #{$breakpoint-medium}) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin lg {
+   @media (min-width:  #{$breakpoint-large}) {
+       @content;
+   }
+}
+
+// Extra large devices
+@mixin xl {
+   @media (min-width: #{$breakpoint-xlarge}) {
+       @content;
+   }
+}

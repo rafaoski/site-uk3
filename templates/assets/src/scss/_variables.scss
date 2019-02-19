@@ -1,0 +1,30 @@
+// 1. Your custom UIKIT variables and variable overwrites
+// node_modules/uikit/src/scss/variables-theme.scss
+
+// 2. Set Custom Colors
+$html_background: #343030;
+$alice: #c2c2c2;
+$black: #262222;
+$bisque: bisque;
+$darken: #3e3b3b;
+$dark_gray: darkgray;
+$gray: #777;
+$heavy_black: #1a1818;
+$tomato: tomato;
+$red: red;
+$orange: #DA7D02;
+$burlywood: burlywood;
+
+// 3. Overwrite default Uikit colors
+// $global-background: $html_background;
+// $global-color: lighten($dark_gray, 10%);
+$global-link-color: $orange;
+$global-link-hover-color: rgba($orange, .7);
+
+// 4. Change Heading Hero
+$heading-hero-font-size-l: 7rem;
+$heading-hero-line-height-l: 1;
+$heading-hero-font-size-m: $heading-hero-font-size-l * 0.75;
+$heading-hero-line-height-m: 1;
+$heading-hero-font-size: $heading-hero-font-size-l * 0.4;
+$heading-hero-line-height: 1.1;

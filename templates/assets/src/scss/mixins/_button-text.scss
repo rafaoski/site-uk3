@@ -1,0 +1,19 @@
+// Button Text
+@mixin hook-button-text(){
+    color: $orange;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        border-bottom: 3px solid $orange;
+        transition: right 0.3s ease-out;
+    }
+}
+@mixin hook-button-text-hover(){
+    color:  rgba($orange, .8);
+    &::before { right: 0; }
+
+}

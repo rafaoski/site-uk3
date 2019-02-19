@@ -1,0 +1,7 @@
+// Tooltip
+@mixin hook-tooltip(){
+  border: 1px solid #9e9b9b66;
+  background-color: $black;
+  color: $tomato;
+  padding: 10px;
+}

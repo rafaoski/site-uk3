@@ -1,0 +1,4 @@
+// Nav Item Active ( Sidebar Items )
+@mixin hook-nav-default-item-active(){
+    color: $global-link-color;
+}
