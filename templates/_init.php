@@ -87,6 +87,7 @@ setting([
     'author-more-articles' => __('See more of my articles'),
     'also-like' => __('You might also like:'),
     'recent-posts' => __('Recent Posts'),
+    'more-posts' => __('More posts'),
     'in-blog' => __('In The Blog'),
     'all-posts' => __('List All Posts'),
     'written-by' => __('Written by'),
