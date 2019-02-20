@@ -16,14 +16,16 @@
 wireincludeFile("views/_head.php");
 ?>
 <!-- MAIN -->
-  <div id='main' class="uk-flex uk-container uk-container-large uk-padding-small uk-margin-top uk-margin-bottom" data-uk-grid>
+  <div id='main' class="uk-container uk-container-large">
+<!-- GRID -->
+    <div class='uk-flex uk-margin-medium-top uk-margin-medium-bottom' data-uk-grid>
+
 <!-- CONTENT BODY -->
     <div id='content-body' class="content-body uk-width-expand uk-flex-last@m">
       <?php // Basic Page Body
         echo page()->body;
       ?>
     </div><!-- /CONTENT BODY -->
-
 <!-- SIDEBAR -->
     <aside id="sidebar" class="sidebar uk-width-1-3@m" pw-optional>
       <?php // Basic Sidebar
@@ -41,10 +43,10 @@ wireincludeFile("views/_head.php");
         <?=$sidebar->sidebar_code;?>
         <?=$sidebar->body;?>
       </div>
-<?php endforeach;
+      <?php endforeach;
       endif; ?>
     </aside><!-- /SIDEBAR -->
-
+    
+    </div><!-- /GRID -->
   </div><!-- /MAIN -->
-
 <?php wireincludeFile("views/_foot.php");
