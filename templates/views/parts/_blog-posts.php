@@ -47,7 +47,10 @@ $size = $post->checkbox ? 'contain' : 'cover';
     </div><!-- /ARTICLE IMAGE -->
 
 <!-- READ MORE LINK  -->
-    <a href="<?=$post->url?>"><?=setting('read-more');?></a>
+    <a href="<?=$post->url?>">
+          <?=setting('read-more');?>
+          <?=ukIcon('arrow-right');?>
+    </a>
 
 <?php // Else Only Body
   else:
