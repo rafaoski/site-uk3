@@ -509,13 +509,12 @@ function CommentForm(CommentArray $comments, array $options = array()) {
 function countComments($items, $check) {
 	$id = $items->comments->last() ? $items->comments->last()->id : '#';
 	if($id == '#') return;
-	if(!$check) return;
-        $out = '';
-        $size = page()->template == 'blog-post' ? 2 : 2.5;
-            $out = "<a style='font-size: {$size}rem' href='$items->url#Comment$id'>";
-            $out .= "<span class='uk-margin-small-bottom'>" . ukIcon('comments', $size -.7) . ' ' . count($items->comments) . "<span>";
-            $out .= "</a>";
-        return $out;
+if(!$check) return;
+$out = '';
+  $out = "<a href='$items->url#Comment$id'>";
+  $out .= "<span class='uk-margin-small-bottom'>" . ukIcon('comments') . ' ' . count($items->comments) . "<span>";
+  $out .= "</a>";
+return $out;
 }
 
 /**
