@@ -628,13 +628,15 @@ function prNx($item = null)
     $out = '';
 
 // link to the prev blog post, if there is one
-    if ($p_prev->id) {
-		$out .= "<a href='$p_prev->url'>&laquo; $p_prev->title</a>";
+if ($p_prev->id) {
+    $icon_prev = ukIcon('arrow-left');
+		$out .= "<a href='$p_prev->url'>$icon_prev $p_prev->title</a>";
     }
 
 // link to the next blog post, if there is one
     if ($p_next->id) {
-        $out .= "<a href='$p_next->url'>$p_next->title &raquo;</a>";
+        $icon_next = ukIcon('arrow-right');
+        $out .= "<a href='$p_next->url'>$p_next->title $icon_next</a>";
     }
 
     return $out;
