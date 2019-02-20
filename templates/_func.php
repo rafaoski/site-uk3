@@ -585,7 +585,6 @@ function blogInfo($post, $user) {
 	}
 	echo ukIcon('user') . ' ';
 	echo "<a style='font-size: 1.5rem; color: #1c98d5;' href='$user->url'>$user->title</a> /
-	<i data-feather='calendar' style='width: 18px; height: 18px;'></i>
 	$post->date / $count_comments";
 }
 
