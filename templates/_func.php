@@ -563,7 +563,11 @@ function blogArchive($startDate = 2018, $option = false)
     return $out;
 }
 
-
+/**
+ *
+ * @param Page $post
+ * @param Page $user
+ */
 function blogInfo($post, $user) {
 	$out = '';
 	$count_comments = countComments($post, setting('enable-comments'));
