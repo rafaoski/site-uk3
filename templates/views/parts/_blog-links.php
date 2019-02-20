@@ -9,7 +9,7 @@ $archives = pages()->get("template=blog-archives");
 <?=ukHeading3(setting('recent-posts'), ['line' => 'left']);?>
 <ul>
 <?php
-foreach ($posts->children('limit=3') as $item ) {
+foreach ($posts->children('limit=3, start=0') as $item ) {
   $edit = editItem($item);
   echo "<li><a href='{$item->url}'>{$item->title}</a> $edit</li>";
 }
@@ -23,7 +23,7 @@ foreach ($posts->children('limit=3') as $item ) {
 <?=ukHeading3($categories->title, ['line' => 'left']);?>
 <ul>
 <?php
-foreach ($categories->children('limit=12') as $item ) {
+foreach ($categories->children('limit=12, start=0') as $item ) {
   $edit = editItem($item);
   echo "<li><a href='{$item->url}'>{$item->title}</a> $edit</li>";
 }
