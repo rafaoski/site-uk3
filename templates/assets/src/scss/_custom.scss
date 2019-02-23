@@ -88,6 +88,16 @@ img.uk-comment-avatar {
 	height: 60px;
 }
 
+/* Search Form */
+.search-f {
+  input {
+    margin: 5px;
+    padding: 10px;
+    &::placeholder {
+      color: $tomato;
+    }
+  }
+}
 
 /****************************************************************
  * Bodycopy text and images

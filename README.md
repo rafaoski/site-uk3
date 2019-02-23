@@ -3,8 +3,14 @@
 #### [MarkupRegions](https://processwire.com/blog/posts/processwire-3.0.49-introduces-a-new-template-file-strategy/)
 #### [FunctionsAPI](https://processwire.com/blog/posts/processwire-3.0.39-core-updates/)  
 
-### Installed Modules
-[SeoMaestro](https://modules.processwire.com/modules/seo-maestro/) 
+### Installed External Modules:
+[TracyDebugger](http://modules.processwire.com/modules/tracy-debugger/)  
+[AdminOnSteroids](http://modules.processwire.com/modules/admin-on-steroids/)  
+[SeoMaestro](https://modules.processwire.com/modules/seo-maestro/)  
+[PageHitCounter](https://modules.processwire.com/modules/page-hit-counter/)  
+[PageTableExtraActions](http://modules.processwire.com/modules/page-table-extra-actions/)  
+[TemplateFieldWidths](http://modules.processwire.com/modules/template-field-widths/)  
+[MarkupSocialShareButtons](https://modules.processwire.com/modules/markup-social-share-buttons/)  
 
 ### Additionally, you can use the icon font that are included ( Default Uikit3 ):
 [Uikit3 Icons](https://getuikit.com/docs/icon)  

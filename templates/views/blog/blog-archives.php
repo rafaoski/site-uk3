@@ -12,6 +12,7 @@ if ($input->urlSegment(1)) {
 }
 ?>
 
+<!-- CONTENT -->
 <div id='content-body' pw-prepend>
 
 <form action="./">
@@ -48,8 +49,9 @@ foreach ($items as $post) {
 // Pagination
 echo ukPagination($items); ?>
 
-</div><!-- /#content-body -->
+</div><!-- /CONTENT -->
 
+<!-- SIDEBAR -->
 <div id='sidebar' pw-prepend>
   <?php wireIncludeFile('views/parts/_blog-links.php'); ?>
-</div>
+</div><!-- /SIDEBAR -->

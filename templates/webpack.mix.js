@@ -38,17 +38,9 @@ mix.js('assets/src/js/app.js', 'assets/js')
             "./views/about/*.php",
             "./views/basic/*.php",
             "./views/blog/*.php",
-            "./views/clients/*.php",
-            "./views/explore/*.php",
-            "./views/gallery/*.php",
+            "./views/contact/*.php",
             "./views/home-sections/*.php",
-            "./views/info/*.php",
             "./views/parts/*.php",
-            "./views/plans/*.php",
-            "./views/portfolio/*.php",
-            "./views/service/*.php",
-            "./views/team/*.php",
-            "./views/testimonials/*.php",
             "./fields/*.php"
          ]
    })

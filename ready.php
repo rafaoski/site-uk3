@@ -86,6 +86,16 @@ $value = str_replace("</title>", "</title>\n$cust_style", $value);
 $event->return = $value;
 });
 
+// Hook Admin Custom CSS
+$wire->addHookAfter('Page::render', function($event) {
+	if(page()->template != 'admin') return;
+// Return Content
+	$value  = $event->return;
+	$templates = urls()->templates;
+	$style = "<link rel='stylesheet' href='{$templates}assets/css/admin.css'>";
+	$event->return = str_replace("</head>", "\n\t$style</head>", $value);
+});
+
 // Reload turbolinks ( Admin Pages )
 $wire->addHookAfter('Page::render', function($event) {
 if(page()->template != 'admin') return;

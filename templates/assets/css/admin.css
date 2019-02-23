@@ -1,0 +1,12 @@
+@media only screen and (max-width: 1024px) {
+    .gutter.gutter-horizontal {
+      display: none;
+    }
+    .aos_col_left {
+      width: 100% !important;
+    }
+    .aos_col_right {
+      width: 100% !important;
+    }
+  }
+  

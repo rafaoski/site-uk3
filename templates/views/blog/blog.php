@@ -43,6 +43,7 @@ foreach ($blog_pages as $item): ?>
 
 </div><!-- /CONTENT -->
 
+<!-- SIDEBAR -->
 <div id='sidebar' pw-prepend>
   <?php wireIncludeFile('views/parts/_blog-links.php'); ?>
-</div>
+</div><!-- /SIDEBAR -->

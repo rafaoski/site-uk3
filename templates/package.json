@@ -24,5 +24,8 @@
     "sass-loader": "^7.1.0",
     "uikit": "^3.0.3",
     "vue-template-compiler": "^2.5.22"
+  },
+  "dependencies": {
+    "turbolinks": "^5.2.0"
   }
 }

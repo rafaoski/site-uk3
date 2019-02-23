@@ -34,7 +34,8 @@ $about_items = page()->children("limit=12");
 </div>
 
 <a href="<?=$about_item->url;?>">
-  <?=setting('read-more');?> &raquo;
+  <?=setting('read-more');?>
+  <?=ukIcon('arrow-right');?>
 </a>
 
 </div>

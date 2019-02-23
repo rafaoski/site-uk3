@@ -16,8 +16,9 @@
     <?php if ($item->e_mail): ?>
 <!-- E-MAIL -->
       <li>
-          <a href="mailto:<?=$item->e_mail?>"><span class="uk-margin-small-right uk-margin-small-bottom" data-uk-icon="icon: mail"></span>
-              <?=$item->e_mail?>
+          <a class='uk-margin-small-bottom' href="mailto:<?=$item->e_mail?>">
+            <span class="uk-margin-small-right uk-margin-small-bottom" data-uk-icon="icon: mail"></span>
+            <?=$item->e_mail?>
           </a>
       </li><!-- /E-MAIL -->
     <?php endif; ?>

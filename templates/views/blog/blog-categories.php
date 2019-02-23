@@ -2,8 +2,8 @@
  $categories = page()->children("limit=18");
 ?>
 
+<!-- CONTENT -->
 <div id='content-body' pw-append>
-
 <div class='uk-flex uk-flex-wrap uk-padding' uk-grid>
   <?php foreach($categories as $category): ?>
   <?php editItem($category);?>
@@ -22,8 +22,9 @@
 
 <?=ukPagination($categories); ?>
 
-</div><!-- #/content -->
+</div><!-- /CONTENT -->
 
+<!-- SIDEBAR -->
 <div id='sidebar' pw-prepend>
   <?php wireIncludeFile('views/parts/_blog-links.php'); ?>
-</div>
+</div><!-- /SIDEBAR -->

@@ -85,6 +85,7 @@ setting([
     'archives-date' => __('Date -- %1s/%2s'),
     'author-not-add' => __('Author did not add any entries'),
     'author-more-articles' => __('See more of my articles'),
+    'more-about' => __('More About'),
     'also-like' => __('You might also like:'),
     'recent-posts' => __('Recent Posts'),
     'more-posts' => __('More posts'),

@@ -1,8 +1,8 @@
 <?php namespace ProcessWire;
 $authors = page()->children("limit=18"); ?>
 
+<!-- CONTENT -->
 <div id='content-body'>
-
   <div class='uk-child-width-1-2@m uk-grid-match uk-margin-large-bottom' data-uk-grid>
   	<?php foreach($authors as $author):
       $user_id = $author->get_user;
@@ -40,8 +40,9 @@ $authors = page()->children("limit=18"); ?>
 
 <?php // Pagination
 echo ukPagination($authors); ?>
-</div><!-- #content-body -->
+</div><!-- /CONTENT -->
 
+<!-- SIDEBAR -->
 <div id='sidebar' pw-prepend>
   <?php wireIncludeFile('views/parts/_blog-links.php'); ?>
-</div>
+</div><!-- /SIDEBAR -->

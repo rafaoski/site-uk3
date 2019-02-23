@@ -10,16 +10,18 @@ $posts = pages()->get("template=blog-posts")->children("tags=$page, limit=12");
 // }
 ?>
 
+<!-- CONTENT -->
 <div id='content-body'>
   <?php
   // Blog Posts
   foreach ($posts as $post) {
-    wireIncludeFile('views/parts/_blog-posts.php', ['post' => $post]);
+    wireIncludeFile('views/parts/_blog-post.php', ['post' => $post]);
   }
   ?>
   <?=ukPagination($posts);?>
-</div>
+</div><!-- /CONTENT -->
 
+<!-- SIDEBAR -->
 <div id='sidebar' pw-prepend>
   <?php wireIncludeFile('views/parts/_blog-links.php'); ?>
-</div>
+</div><!-- /SIDEBAR -->

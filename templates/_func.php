@@ -14,46 +14,6 @@ $out .= "<span class='uk-text-muted'>$item->meta_title</span></a>";
 return editItem($item) . $out;
 }
 
-/**
- *
- * @param array $opt https://www.addtoany.com/
- *
- */
-function toAny($opt = ['t','f','g-p','l','r','e','g-m'])
-{
-    $out = '';
-    $edit = editItem(pages()->get('/options/'), 'right: 15px; top: 100px; position: fixed;');
-      $out .= "<!-- AddToAny BEGIN -->
-      <div class='a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style' style='right:0px; top:150px; background-color: #2e2d2d99;'>
-      $edit
-      <a class='a2a_dd' href='https://www.addtoany.com/share'></a>";
-    if (in_array('f', $opt)) {
-        $out .= "<a class='a2a_button_facebook'></a>";
-    }
-    if (in_array('t', $opt)) {
-        $out .= "<a class='a2a_button_twitter'></a>";
-    }
-    if (in_array('g-p', $opt)) {
-        $out .= "<a class='a2a_button_google_plus'></a>";
-    }
-    if (in_array('l', $opt)) {
-        $out .= "<a class='a2a_button_linkedin'></a>";
-    }
-    if (in_array('r', $opt)) {
-        $out .= "<a class='a2a_button_reddit'></a>";
-    }
-    if (in_array('e', $opt)) {
-        $out .= "<a class='a2a_button_email'></a>";
-    }
-    if (in_array('g-m', $opt)) {
-        $out .= "<a class='a2a_button_google_gmail'></a>";
-    }
-      $out .= "</div>
-      <script src='https://static.addtoany.com/menu/page.js' defer></script>
-      <!-- AddToAny END -->";
-      return $out;
-}
-
 
 /**
  *
@@ -100,6 +60,7 @@ function seoPagination($page)
  *
  */
 function externalLink(PageArray $external_links, array $options = []) {
+$p_templ = page()->template;
 $style = (isset($options['style']) && !empty($options['style'])) ? "style='{$options['style']}'" : '';
 $class = (isset($options['class']) && !empty($options['class'])) ? "class='{$options['class']}'" : '';
 $ratio = (isset($options['ratio']) && !empty($options['ratio'])) ? "{$options['ratio']}" : '1.3';
@@ -107,11 +68,10 @@ $ratio = (isset($options['ratio']) && !empty($options['ratio'])) ? "{$options['r
     foreach ($external_links as $link) {
     $icon = $link->text_1 ? "data-uk-icon='icon:$link->text_1; ratio: $ratio'" : '';
     $title = $link->text_3 ? "title='$link->text_3'" : '';
-    $li_class = "external_link-" . sanitizer()->pageName($link->text_1, true);
-    $tooltip = $link->text_3 ?  "data-uk-tooltip='$link->text_3'" : '';
+    $li_class = "ext-$p_templ external_link-" . sanitizer()->pageName($link->text_1, true);
     $target = $link->checkbox ?  "target='_blank'" : '';
     $no_follow = $link->checkbox_1 ?  "rel='nofollow'" : '';
-    $all_items = "$icon $title $tooltip $target $no_follow";
+    $all_items = "$icon $title $target $no_follow";
         if($link->text_1 == 'rss' && $link->url_1 == '') $link->url_1 = pages()->get("template=blog-rss")->url;
         $out .= "<li class='$li_class uk-padding-remove'>";
         $out .= "<a $class $style href='$link->url_1' $all_items>$link->text_2 </a></li>";

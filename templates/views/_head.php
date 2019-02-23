@@ -63,6 +63,10 @@ gwCode(setting('gw-code'));
   <?php endif;?>
   </div><!-- /HEADER SEO -->
 
+<?php
+// External Links
+$show_links = ['home', 'contact', 'about', 'about-item'];
+if ( in_array(page()->template->name, $show_links) ): ?>
 <!-- EXTERNAL LINKS -->
   <div id='external-links' class='uk-position-relative uk-margin-medium-top uk-margin-small-bottom'>
     <ul class="uk-iconnav uk-flex uk-flex-center">
@@ -73,6 +77,7 @@ gwCode(setting('gw-code'));
        ?>
     </ul>
   </div><!-- /EXTERNAL LINKS -->
+  <?php endif; ?>
 
   <?php if($lang_enable == true):?>
   <!-- LANG MENU -->
@@ -111,9 +116,5 @@ gwCode(setting('gw-code'));
 </div><!-- /OFFCANVAS NAVIGATION -->
 
 <?php
-// Social Share Buttons ( https://www.addtoany.com/ )
-if (setting('enable-share-buttons')) {
-echo toAny(['f','t','e']);
-}
 // Edit Button
 echo editBtn(page());

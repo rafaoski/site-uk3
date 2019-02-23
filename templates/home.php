@@ -32,7 +32,7 @@ $sections = pages('/options/')->home_sections;
 <!-- SIDEBAR -->
 <div id="sidebar" pw-append>
   <?php
-  $contact = pages()->get("template=contact");
+    $contact = pages()->get("template=contact");
     // Get Last Image ( https://processwire.com/docs/fields/images/ )
     $image = $contact->images ? $contact->images->last() : '';
     wireIncludeFile('views/contact/_contact-info.php', ['item' => $contact]); ?>

@@ -26,6 +26,7 @@ wireincludeFile("views/_head.php");
         echo page()->body;
       ?>
     </div><!-- /CONTENT BODY -->
+    
 <!-- SIDEBAR -->
     <aside id="sidebar" class="sidebar uk-width-1-3@m" pw-optional>
       <?php // Basic Sidebar
@@ -46,7 +47,7 @@ wireincludeFile("views/_head.php");
       <?php endforeach;
       endif; ?>
     </aside><!-- /SIDEBAR -->
-    
+
     </div><!-- /GRID -->
   </div><!-- /MAIN -->
 <?php wireincludeFile("views/_foot.php");
