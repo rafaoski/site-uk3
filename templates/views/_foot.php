@@ -5,7 +5,7 @@
 <div class="uk-flex uk-flex-wrap uk-flex-around uk-flex-middle">
 <!-- SEARCH FORM -->
   <div id='search-form' class='search-form uk-margin-small'>
-    <form class='search-f' class='uk-search uk-search-default' action='<?=pages()->get('template=basic-search')->url?>' method='get'>
+    <form class='search-f uk-search uk-search-default' action='<?=pages()->get('template=basic-search')->url?>' method='get'>
     <label class='uk-light uk-text-large uk-text-warning' for="search-input">
       <?=ukIcon('search', 1.5);?>
       <?=setting('search-placeholder')?>
