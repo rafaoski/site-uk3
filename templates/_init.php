@@ -78,8 +78,6 @@ setting([
     'found-pages' => __("Found %d page(s)."),
     'no-found' =>  __('Sorry, no results were found.'),
     'mobile-nav' =>  __('Mobile Nav Menu'),
-    'contact-info' => __('Contact Info'),
-    'more-contact' => __('More Contact Information'),
 // Blog Translate ( views/blog/all-files* )
     'select-archives' => __('Select Archives'),
     'archives-date' => __('Date -- %1s/%2s'),
@@ -107,6 +105,9 @@ setting([
     'comment-text' => __('Comments'),
     'comment-submit' => __('Submit'),
     'stars-required' => __('Please select a star rating'),
+// Contact Info Translate
+    'contact-info' => __('Contact Info'),
+    'more-contact' => __('More Contact Information'),
 // Contact Form Translate
     'not-fill' => __('Do Not Fill First Security Input !!!'),
     'contact-form' => __('Contact Form'),
