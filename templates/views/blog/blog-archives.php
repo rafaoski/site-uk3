@@ -44,7 +44,7 @@ if ($y) {
 }
 // Blog Posts
 foreach ($items as $post) {
-  wireIncludeFile('views/parts/_blog-posts.php', ['post' => $post]);
+  wireIncludeFile('views/parts/_blog-post.php', ['post' => $post]);
 }
 // Pagination
 echo ukPagination($items); ?>
