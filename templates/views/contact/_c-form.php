@@ -17,6 +17,7 @@ $save_message = isset($save_message) ? $save_message : '';
 $contact_page = isset($contact_page) ? $contact_page : '';
 $contact_item = isset($contact_item) ? $contact_item : '';
 // Contact Form Translate
+$c_form = setting('contact-form');
 $not_fill = setting('not-fill');
 $label_name = setting('label-name');
 $label_email = setting('label-email');
@@ -121,7 +122,7 @@ else :
           <fieldset>
 <!-- LEGEND -->
             <legend>
-              <?=ukHeading3(setting('contact-form'),['class' => 'uk-h1']);?>
+              <?=ukHeading3($c_form,['class' => 'uk-h1']);?>
             </legend>
 <!-- CSRF -->
             <input type='hidden' id='_post_token' name='<?=$token_name?>' value='<?=$token_value?>'>
