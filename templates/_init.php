@@ -107,6 +107,21 @@ setting([
     'comment-text' => __('Comments'),
     'comment-submit' => __('Submit'),
     'stars-required' => __('Please select a star rating'),
+// Contact Form Translate
+    'not-fill' => __('Do Not Fill First Security Input !!!'),
+    'contact-form' => __('Contact Form'),
+    'label-name' => __('Name'),
+    'label-email' => __('E-Mail'),
+    'label-message' => __('Message'),
+    'submit' => __('Submit'),
+    'reset' => __('Reset'),
+    'show-form' => __('Show Form'),
+    'label-success' => __('Success !!! Your message has been sent'),
+    'label-accept' => __('By submitting a query, you accept'),
+    'label-privacy' => __('privacy policy'),
+    'something_wrong' => __('Something Wrong !!! Try it again'),
+    'fill-fields' => __('Fill the fields correctly !!!'),
+    'csrf-match' =>  __('Stop ... Session CSRF Not Match !!!'),
 ]);
 
 include_once('./_uikit.php');

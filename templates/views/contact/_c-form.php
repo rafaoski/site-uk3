@@ -16,20 +16,20 @@ $save_message = isset($save_message) ? $save_message : '';
 // Set Contact Page & Contact Items To Save Message
 $contact_page = isset($contact_page) ? $contact_page : '';
 $contact_item = isset($contact_item) ? $contact_item : '';
-// Basic Translate
-$not_fill = __('Do Not Fill First Security Input !!!');
-$label_name = __('Name');
-$label_email = __('E-Mail');
-$label_message = __('Message');
-$submit = __('Submit');
-$reset = __('Reset');
-$show_form = __('Show Form');
-$label_success = __('Success !!! Your message has been sent');
-$label_accept = __('By submitting a query, you accept');
-$label_privacy = __('privacy policy');
-$something_wrong = __('Something Wrong !!! Try it again');
-$fill_fields = __('Fill the fields correctly !!!');
-$csrf_match =  __('Stop ... Session CSRF Not Match !!!');
+// Contact Form Translate
+$not_fill = setting('not-fill');
+$label_name = setting('label-name');
+$label_email = setting('label-email');
+$label_message = setting('label-message');
+$submit = setting('submit');
+$reset = setting('reset');
+$show_form = setting('show_form');
+$label_success = setting('label-success');
+$label_accept = setting('label-accept');
+$label_privacy = setting('label-privacy');
+$something_wrong = setting('something-wrong');
+$fill_fields = setting('fill-fields');
+$csrf_match = setting('csrf-match');
 
 // If Submit Form
 if ($input->post->submit) :
@@ -121,7 +121,7 @@ else :
           <fieldset>
 <!-- LEGEND -->
             <legend>
-              <?=ukHeading3('Contact Form',['class' => 'uk-h1']);?>
+              <?=ukHeading3(setting('contact-form'),['class' => 'uk-h1']);?>
             </legend>
 <!-- CSRF -->
             <input type='hidden' id='_post_token' name='<?=$token_name?>' value='<?=$token_value?>'>
